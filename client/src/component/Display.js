@@ -2,7 +2,7 @@ import React from 'react';
 import StarView from './StarView';
 import UpdateDeleteReview from './UpdateDeleteReview';
 
-const Display = ({ movieLists }) => {
+const Display = ({ movieLists, updateRefresh, setUpdateRefresh }) => {
 
     return (
         <div>
@@ -17,7 +17,9 @@ const Display = ({ movieLists }) => {
                     <div className="rateView">
                     <StarView rating={movieList.rating} />
                     </div>
-                    <UpdateDeleteReview movieList={movieList} />
+                    <UpdateDeleteReview movieList={movieList} 
+                    updateRefresh={updateRefresh}
+                    setUpdateRefresh={setUpdateRefresh} />
                 </div>
             )
             )}

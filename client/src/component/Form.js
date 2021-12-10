@@ -4,13 +4,10 @@ import movieAxiosFile from '../services/movieAxiosFile';
 
 
 
-const Form = ({ movieName,
-    setMovieName,
-    review,
-    setReview,
-    movieLists,
-    setMovieLists }) => {
-    const [starRate, setStarRate] = useState(null);
+const Form = ({ movieLists, setMovieLists }) => {
+    const [movieName, setMovieName] = useState('');
+    const [review, setReview] = useState('');
+    const [starRate, setStarRate] = useState(0);
 
     const movieNameHandler = (e) => {
         setMovieName(e.target.value);
@@ -38,7 +35,7 @@ const Form = ({ movieName,
             ]);
             setMovieName("");
             setReview("");
-            setStarRate(null)
+            setStarRate(0)
         }
     }
 
